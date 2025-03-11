@@ -41,7 +41,7 @@ function ProfilePage() {
         </Link>
 
         {/* Profile Section */}
-        <div className="flex flex-col items-center border-b pb-6">
+        <div className="flex flex-col items-center border-b pb-6 mt-10">
           <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-gray-300">
             <img
               src={user.profilePic}
