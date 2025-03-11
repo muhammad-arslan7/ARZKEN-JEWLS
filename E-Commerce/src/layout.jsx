@@ -1,20 +1,17 @@
-import { Outlet, useLocation } from "react-router-dom";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import React from 'react'
+import {Outlet} from 'react-router-dom'
+import Header from './components/header'
+import Footer from './components/footer'
 
-function Layout() {
-  const location = useLocation();
-  const hideFooterOnPages = ["/profile"];
 
+function layout() {
   return (
-    <>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      {!hideFooterOnPages.includes(location.pathname) && <Footer />}
-    </>
-  );
+    <div className='bg-[#e9e1de] p-5'>
+      <Header/>
+      <Outlet/>
+      <Footer/>
+    </div>
+  )
 }
 
-export default Layout;
+export default layout
