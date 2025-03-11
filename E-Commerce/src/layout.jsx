@@ -1,17 +1,19 @@
-import React from 'react'
-import {Outlet} from 'react-router-dom'
-import Header from './components/header'
-import Footer from './components/footer'
+import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
+function Layout() {
+  const location = useLocation();
 
-function layout() {
   return (
-    <div className='bg-[#e9e1de] p-5'>
-      <Header/>
-      <Outlet/>
-      <Footer/>
+    <div className="bg-[#e9e1de] p-5">
+      <Header />
+      <Outlet />
+      {/* Hide footer on the profile page */}
+      {location.pathname !== "/profile" && <Footer />}
     </div>
-  )
+  );
 }
 
-export default layout
+export default Layout;

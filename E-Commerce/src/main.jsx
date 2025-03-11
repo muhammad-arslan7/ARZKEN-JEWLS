@@ -12,9 +12,9 @@ import Profile from './components/profile'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>} >
-      <Route path ='' element={<Home/>} />
-      <Route path ='collections' element={<Collections/>} />
-      <Route path ='profile' element={<Profile/>} />
+      <Route path='' element={<Home/>} />
+      <Route path='collections' element={<Collections/>} />
+      <Route path='profile' element={<Profile/>} />
     </Route>
   )
 )
